@@ -20,7 +20,7 @@ export default function SideBar(props: SideBarProps) {
           <MenuItem
             title="Transaction"
             icon="icon-menu-transaction"
-            href="member/transactions"
+            href="/member/transactions"
             active={activeMenu === "transactions"}
           />
           <MenuItem title="Messages" icon="icon-menu-messages" href="/member" />
