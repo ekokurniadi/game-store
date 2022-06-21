@@ -4,7 +4,7 @@ import GameItem from "../../molecules/GameItem";
 
 export default function FeatureGames() {
   const [gameList, setGameList] = useState([]);
-
+  const API_IMG = process.env.NEXT_PUBLIC_IMG;
   const getFeaturedGameList = useCallback(async () => {
     const data = await getFeaturedGame();
     setGameList(data);
@@ -31,7 +31,7 @@ export default function FeatureGames() {
                 key={item._id}
                 title={item.name}
                 category={item.category.name}
-                thumbnail="Thumbnail-1"
+                thumbnail={`${API_IMG}/${item.thumbnail}`}
               />
             );
           })}
